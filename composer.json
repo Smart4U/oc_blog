@@ -11,10 +11,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": "^7.1",
         "symfony/dotenv": "^4.0@dev",
         "robmorgan/phinx": "dev-master",
         "fzaninotto/faker": "^1.8@dev",
-        "php": "^7.1"
+        "guzzlehttp/guzzle": "^6.2@dev"
     },
     "autoload": {
         "psr-4": {
