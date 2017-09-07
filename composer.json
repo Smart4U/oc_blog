@@ -1,0 +1,19 @@
+{
+    "name": "smart4u/oc_blog",
+    "description": "Blog simple but scalable",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smart4U",
+            "email": "email4webdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
