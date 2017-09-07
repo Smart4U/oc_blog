@@ -2,4 +2,7 @@ composer.lock
 composer.phar
 /vendor/
 
+.env.dev
+.env.prod
+
 /.idea/
