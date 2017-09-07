@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/dotenv": "^4.0@dev",
-        "robmorgan/phinx": "dev-master"
+        "robmorgan/phinx": "dev-master",
+        "fzaninotto/faker": "^1.8@dev"
     },
     "autoload": {
         "psr-4": {
