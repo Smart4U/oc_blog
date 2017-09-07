@@ -15,7 +15,8 @@
         "symfony/dotenv": "^4.0@dev",
         "robmorgan/phinx": "dev-master",
         "fzaninotto/faker": "^1.8@dev",
-        "guzzlehttp/guzzle": "^6.2@dev"
+        "guzzlehttp/guzzle": "^6.2@dev",
+        "php-di/php-di": "dev-master"
     },
     "autoload": {
         "psr-4": {

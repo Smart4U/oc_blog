@@ -18,6 +18,8 @@ $dotenv->load(ROOT.'/.env.prod', ROOT.'/.env.dev');
 
 
 /**
- * The configuration
+ * Dependency injection container
  */
-$config = \App\Core\Config::getInstance(CONFIG);
+$builder = new DI\ContainerBuilder();
+$builder->addDefinitions(require ROOT.'/kernel.php');
+$container = $builder->build();
