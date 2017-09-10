@@ -3,6 +3,7 @@
 $debug = (getenv('APP_ENV') === 'dev') ? true : false;
 
 return [
-    'debug' => $debug,
-    'domain' => getenv('APP_HOST'),
+    // APP
+    'app.debug' => $debug,
+    'app.domain' => getenv('APP_HOST')
 ];

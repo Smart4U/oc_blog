@@ -1,11 +1,11 @@
 <?php
 
+namespace App\Core\Config;
+
 /**
  * Class Config
  * This class makes it easy to retrieve an element of the configuration
  */
-namespace App\Core;
-
 final class Config {
 
     /**

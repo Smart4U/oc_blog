@@ -1,15 +1,19 @@
 <?php
 
+
 return [
 
-    // Config
-    'Config' => \App\Core\Config::getInstance(CONFIG),
+    // CONFIG
+    'config' => \App\Core\Config\Config::getInstance(CONFIG),
 
     // HTTP
-    'Request' => function() {
-        return \GuzzleHttp\Psr7\ServerRequest::fromGlobals();
-    },
-    'Response' => function() {
-        return new \GuzzleHttp\Psr7\Response(200, [], null,1.1);
-    }
+    \GuzzleHttp\Psr7\ServerRequest::class => \DI\factory(\App\Core\Http\RequestFactory::class),
+    \GuzzleHttp\Psr7\Response::class => \DI\factory(\App\Core\Http\ResponseFactory::class)
+        ->parameter('statusCode', 200)
+        ->parameter('headers', []) // fool the newbies ^-^
+        ->parameter('body', null)
+        ->parameter('version', 1.1),
+
+    // ROUTER
+    \App\Core\Routing\Router::class => \DI\factory(\App\Core\Routing\RouterFactory::class),
 ];
