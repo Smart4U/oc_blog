@@ -6,13 +6,16 @@ use App\Bundles\Contact\Controllers\ContactController;
 
 return [
     // BUNDLE
-    ContactBundle::class => DI\autowire(),
+    ContactBundle::class => \DI\autowire(),
 
     // CONTROLLERS
-    ContactController::class => DI\create()->constructor(\GuzzleHttp\Psr7\ServerRequest::class, \App\Core\View\TwigViewer::class),
+    ContactController::class => \DI\autowire(),
 
     // ROUTES
     'contact.routes' => [
         '/contact' => [[ContactController::class, 'contact'], ['GET'], 'contact'],
-    ]
+    ],
+
+    // VIEWS
+    'contact.views.path' => dirname(__DIR__) . '/views'
 ];

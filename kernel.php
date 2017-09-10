@@ -22,4 +22,10 @@ return [
 
     // ROUTER
     \App\Core\Routing\Router::class => \DI\factory(\App\Core\Routing\RouterFactory::class),
+
+    // VIEWS
+    \App\Core\View\TwigViewer::class => \DI\create()->constructor(VIEWS),
+
+    // CONTROLLERS
+    \App\Core\Controller\BaseController::class => DI\autowire()
 ];

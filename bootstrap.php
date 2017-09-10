@@ -9,6 +9,7 @@ require 'vendor/autoload.php';
 define('ROOT', __DIR__.'/');
 define('CONFIG', ROOT.'config/');
 define('STORAGE', ROOT.'storage/');
+define('VIEWS', ROOT.'resources/views/');
 
 
 /**

@@ -13,8 +13,8 @@ return [
 
     // ROUTES
     'blog.routes' => [
-        '/blog' => [[BlogController::class, 'index'], ['GET'], 'home'],
-        '/blog/article/{slug:[a-zA-Z0-9-]+}-{id:[0-9]+}' => [[BlogController::class, 'index'], ['GET'], 'home'],
+        '/blog' => [[BlogController::class, 'index'], ['GET'], 'blog.index'],
+        '/blog/article/{slug:[a-zA-Z0-9-]+}-{id:[0-9]+}' => [[BlogController::class, 'show'], ['GET'], 'blog.show'],
     ]
 
 ];

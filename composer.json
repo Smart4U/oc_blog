@@ -18,7 +18,8 @@
         "guzzlehttp/guzzle": "^6.2@dev",
         "http-interop/response-sender": "dev-master",
         "php-di/php-di": "dev-master",
-        "zendframework/zend-expressive-fastroute": "^2.1@dev"
+        "zendframework/zend-expressive-fastroute": "^2.1@dev",
+        "twig/twig": "^3.0@dev"
     },
     "autoload": {
         "psr-4": {
