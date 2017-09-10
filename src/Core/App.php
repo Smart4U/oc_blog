@@ -22,6 +22,12 @@ class App
 {
 
     /**
+     * List of bundles
+     * @var array
+     */
+    protected $bundles;
+
+    /**
      * @var ContainerInterface
      */
     protected $container;
@@ -33,6 +39,11 @@ class App
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
+        if($this->container->has('bundles')){
+            foreach ($this->container->get('bundles') as $bundle) {
+                $this->bundles[] = $this->container->get($bundle);
+            }
+        }
     }
 
     /**

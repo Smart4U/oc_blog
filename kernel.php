@@ -3,6 +3,12 @@
 
 return [
 
+    // BUNDLES TO BE LOADED
+    'bundles' => [
+        \App\Bundles\Blog\BlogBundle::class,
+        \App\Bundles\Contact\ContactBundle::class
+    ],
+
     // CONFIG
     'config' => \App\Core\Config\Config::getInstance(CONFIG),
 

@@ -26,4 +26,11 @@ $kernel = require ROOT.'kernel.php';
 $builder = new DI\ContainerBuilder();
 $builder->addDefinitions($kernel);
 
+foreach ($kernel['bundles'] as $bundle) {
+    if($bundle::INIT_BUNDLE){
+        $bundle = require($bundle::INIT_BUNDLE);
+        $builder->addDefinitions($bundle);
+    }
+}
+
 return $builder->build();
